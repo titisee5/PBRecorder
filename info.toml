@@ -1,0 +1,10 @@
+[meta]
+name = "PB Recorder"
+author = "titisee5"
+category = "Replay"
+version = "1.2"
+siteid = 344
+
+[script]
+dependencies = [ "NadeoServices" ]
+

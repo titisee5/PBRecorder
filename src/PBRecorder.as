@@ -96,7 +96,7 @@ void StartRecording(bool show_notif) {
     pb_time = LoadPB();
     finishedOnce = false;
     save_path = ParsePath(true);
-} 
+}
 
 void OnMapChange() {
     inProgress = RecordIndividualMap();
@@ -107,7 +107,7 @@ void OnMapChange() {
 
     // start request if map is totd/campaign
     if (NadeoServices::IsAuthenticated("NadeoLiveServices")) {
-        @req_map = NadeoServices::Get("NadeoLiveServices", NadeoServices::BaseURL() + "/api/campaign/map/" + map.IdName);
+        @req_map = NadeoServices::Get("NadeoLiveServices", NadeoServices::BaseURLLive() + "/api/campaign/map/" + map.IdName);
         req_map.Start();
         waiting_for_map = true;
     }

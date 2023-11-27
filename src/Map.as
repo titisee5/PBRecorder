@@ -38,14 +38,14 @@ uint LoadPB() {
     } else {
         userId.Value = uint(-1);
     }
-    
+
     auto scoreMgr = network.ClientManiaAppPlayground.ScoreMgr;
     uint local_pb = scoreMgr.Map_GetRecord_v2(userId, map.MapInfo.MapUid, "PersonalBest", "", "TimeAttack", "");
 
     //start loading pb from online leaderboard
     string mapid = network.ClientManiaAppPlayground.Playground.Map.MapInfo.MapUid;
     if (NadeoServices::IsAuthenticated("NadeoLiveServices")) {
-        @req_pb = NadeoServices::Get("NadeoLiveServices", NadeoServices::BaseURL() + "/api/token/leaderboard/group/Personal_Best/map/" + mapid + "/surround/0/0?onlyWorld=true");
+        @req_pb = NadeoServices::Get("NadeoLiveServices", NadeoServices::BaseURLLive() + "/api/token/leaderboard/group/Personal_Best/map/" + mapid + "/surround/0/0?onlyWorld=true");
         req_pb.Start();
         waiting_for_pb = true;
     }

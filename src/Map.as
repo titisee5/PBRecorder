@@ -12,7 +12,7 @@ bool RecordIndividualMap() {
 }
 
 void ReceiveTrackInfo() {
-    if (req_map.Finished()) {
+    if(@req_map != null && req_map.Finished()) {
         waiting_for_map = false;
         Json::Value@ response = Json::Parse(req_map.String());
         @req_map = null;

@@ -19,7 +19,7 @@ CGameDataFileManagerScript@ TryGetDataFileMgr()
 string ParsePath(bool is_PB) {
     string parsed_path = base_path;
 
-    string mapName = StripFormatCodes(map.MapName);
+    string mapName = Text::StripFormatCodes(map.MapName);
     if (remove_ft_folder) mapName = RemoveFt(mapName);
 
     string if_pattern = "\\?(.*?):(.*?):(.*?)\\?";

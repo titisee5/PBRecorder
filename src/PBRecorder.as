@@ -70,7 +70,7 @@ void SaveReplay(CGameGhostScript@ ghost)
     if (m_gameDataFileManager !is null) {
         totalRecorded++;
 
-        string safeMapName = StripFormatCodes(map.MapName);
+        string safeMapName = Text::StripFormatCodes(map.MapName);
         if (remove_ft_file) safeMapName = RemoveFt(safeMapName);
         string safeUserName = ghost.Nickname;
         string fmtGhostTime = FormatTimer(ghost.Result.Time).Replace(":", "-");

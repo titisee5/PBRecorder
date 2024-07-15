@@ -2,7 +2,7 @@
 name = "PB Recorder"
 author = "titisee5"
 category = "Replay"
-version = "1.4"
+version = "1.5"
 siteid = 344
 
 [script]
